@@ -1,0 +1,41 @@
+# =======================================================================================================================================
+# ImmoBird - Dépendances Python pour Machine Learning
+# Librairies requises : Data Science + ML + Sérialisation
+# ---------------------------------------------------------------------------------------------------------------------------------------
+# Requirements pédagogiques pour CDP Data & IA : stack ML standard avec versions compatibles
+# Chaque package a un rôle spécifique dans le pipeline de modélisation
+# =======================================================================================================================================
+
+# =======================================================================================================================================
+# MANIPULATION ET ANALYSE DE DONNÉES
+# =======================================================================================================================================
+
+pandas>=2.1.4,<2.3.0                       # Manipulation de données tabulaires (DataFrames, CSV, analyse)
+                                            # Version flexible pour compatibilité Airflow
+numpy==1.26.4                               # Calculs numériques, algèbre linéaire, métriques statistiques
+
+# =======================================================================================================================================
+# MACHINE LEARNING ET PREPROCESSING
+# =======================================================================================================================================
+
+scikit-learn==1.5.1                         # Preprocessing (StandardScaler, OneHotEncoder)
+                                            # Train/test split, métriques (RMSE, R²)
+                                            # Écosystème ML standard de référence
+
+xgboost==2.1.1                              # Algorithme Gradient Boosting (modèle de régression)
+                                            # Performance élevée, feature importance, robustesse
+
+# =======================================================================================================================================
+# SÉRIALISATION ET PERSISTANCE
+# =======================================================================================================================================
+
+joblib==1.4.2                               # Sérialisation efficace des modèles ML (sauvegarde/chargement)
+                                            # Optimisé pour les objets NumPy et scikit-learn
+
+# =======================================================================================================================================
+# NOTES PÉDAGOGIQUES POUR CDP
+# =======================================================================================================================================
+
+# Airflow est fourni par l'image de base Docker - ne pas l'installer ici pour éviter les conflits
+# Les versions sont fixées pour garantir la reproductibilité entre environnements
+# En production, on utiliserait un fichier requirements-lock.txt avec toutes les dépendances transitives
